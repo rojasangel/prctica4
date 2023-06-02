@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include <math.h> 
+#include <stdlib.h>
+
+int main() {
+
+  int n,nn,op;
+  
+printf(" 1) Determinar si el número es par o impar\n");
+printf(" 2) Elevar un número a una potencia\n");
+printf(" 3) Calcular la raíz cuadrada de un número\n");
+printf( "4) Terminar el programa\n");
+  do{
+printf("ingrese la opcion deseada\n");
+  scanf("%d",&op);
+
+switch(op){
+  case  1:
+  printf("ingrese un numero para ver si es par:");
+  scanf("%d",&n);
+  if(n%2==0)
+    printf("el numero %d es par. \n",n);
+  else 
+    printf("el numer %d es inpar",n);
+  break;
+
+  case 2:
+  printf("ingrese un numero para elevarlo a la potencia:");
+  scanf("%d",&n);
+  nn=pow(n,2);
+  printf("el numero %d elevado a la potencia es= %d",n,nn);
+  break;
+
+  case 3:
+  printf("ingrese un numero para ver su raiz  cuadrada: \n");
+  scanf("%d",&n);
+  nn=sqrt(n);
+  printf("la raiz cuadrada de %d es= %d",n,nn);
+  break;
+
+  case 4:
+  printf("ha terminado el programa, gracias\n");
+  break;
+
+  default:
+  printf("el numero que ingreso no es valido\n");
+  
+}
+ 
+  }while(op!=4);
+  return 0;
+}
